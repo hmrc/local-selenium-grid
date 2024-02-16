@@ -1,0 +1,19 @@
+[distributor]
+reject-unsupported-caps = true
+
+[node]
+detect-drivers = false
+enable-managed-downloads = true
+selenium-manager = true
+
+[[node.driver-configuration]]
+display-name = "Chrome"
+stereotype = '{"browserName": "chrome", "browserVersion": "120"}'
+
+[[node.driver-configuration]]
+display-name = "Firefox"
+stereotype = '{"browserName": "firefox", "browserVersion": "120"}'
+
+[[node.driver-configuration]]
+display-name = "Edge"
+stereotype = '{"browserName": "MicrosoftEdge", "browserVersion": "120"}'
