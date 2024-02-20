@@ -53,11 +53,13 @@ Ensure that selenium grid is started, and in a new terminal:
 
 Running a browser headless means that the browser window isn't visible when the tests are running
  
-The way that ui-test-runner library automatially runs accessibility checks of pages visited by the browser relies on a browser plugin
+The way that the ui-test-runner library automatially sets up browsers to run accessibility checks of pages visited during testing relies on a browser plugin
 
-However, the original (default) headless mode most browsers implement doesn't work with browser plugins
+The original (default) headless mode most browsers implement doesn't allow the use of browser plugins
 
-[Chrome has now introduced a new headless mode](https://developer.chrome.com/docs/chromium/new-headless#new_headless_in_selenium-webdriver) that enables (among other things) the use of browser plugins
+So unfortunately we weren't able to run tests using a headless browser
+
+However, [Chrome has now introduced a new headless mode](https://developer.chrome.com/docs/chromium/new-headless#new_headless_in_selenium-webdriver) that enables (among other things) the use of browser plugins
 
 At the moment it's not possible when using the ui-test-runner library to configure it to open the browser using the new headless mode
 
