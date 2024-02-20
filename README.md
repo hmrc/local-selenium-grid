@@ -49,6 +49,22 @@ Ensure that selenium grid is started, and in a new terminal:
 4. `./run-tests.sh edge`
 5. `./run-tests.sh firefox`
 
+### Run browsers in headless mode
+
+Running a browser headless means that the browser window isn't visible when the tests are running
+ 
+The way that the ui-test-runner library automatially sets up browsers to run accessibility checks of pages visited during testing relies on a browser plugin
+
+The original (default) headless mode most browsers implement doesn't allow the use of browser plugins
+
+So unfortunately we weren't able to run tests using a headless browser
+
+However, [Chrome has now introduced a new headless mode](https://developer.chrome.com/docs/chromium/new-headless#new_headless_in_selenium-webdriver) that enables (among other things) the use of browser plugins
+
+At the moment it's not possible when using the ui-test-runner library to configure it to open the browser using the new headless mode
+
+As a temporary work around, (thanks to a contribution by [Lewis Mitchell](https://github.com/LewisMitchell) 🙌) you can [checkout and start selenium grid from this branch](https://github.com/hmrc/local-selenium-grid/pull/2/files) which configures all chrome browsers opened by local-selenium-grid to use the new headless mode
+
 ### Debug
 
 If it fails to start, problems will be logged to `./selenium-server.log`
