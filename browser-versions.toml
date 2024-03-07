@@ -8,7 +8,7 @@ selenium-manager = true
 
 [[node.driver-configuration]]
 display-name = "Chrome"
-stereotype = '{"browserName": "chrome", "browserVersion": "120"}'
+stereotype = '{"browserName": "chrome", "browserVersion": "120", "goog:chromeOptions": {"args": ["--disable-features=MediaRouter"]}}'
 
 [[node.driver-configuration]]
 display-name = "Firefox"
