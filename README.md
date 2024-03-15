@@ -27,7 +27,7 @@ Selenium Grid via selenium-server standalone
 
 Then, start as follows:
 
-```
+```shell
 ./start.sh
 ```
 
